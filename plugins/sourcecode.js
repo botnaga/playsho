@@ -10,6 +10,10 @@ Script bot ada di link website kami kak
 
 https://bot-playshop.blogspot.com/2022/06/home.html
 
+Link Website Rest Bot
+
+https://website-playshop.000webhostapp.com/website-playshop/yuzzu-api.herokuapp.com/index.html
+
 Jangan Lupa Follow IG Kami
 
 My Instagram : https://Instagram.com/playshop.online.id
