@@ -19,7 +19,7 @@ const defaultMenu = {
 │
 ├ Uptime: *%uptime (%muptime)*
 ├ Database: %rtotalreg dari %totalreg
-├ Website : https://chat.whatsapp.com/CES7Y1mtwJWC3vKxtOlAgg
+├ Grup sc : https://chat.whatsapp.com/Bvq8eYX0oFiCmuswraBgkk
 └────
 %readmore`.trim(),
   header: '┌─〔 %category 〕',
