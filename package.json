@@ -1,7 +1,7 @@
 {
-    "name": "Family",
-    "version": "2.3.5",
-    "description": "Simle Bot WhatsApp with Baileys Multi Device",
+    "name": "BOT-PLAYSHOP",
+    "version": "1.6.6",
+    "description": "Bot WhatsApp Adalah Sebuat Sistem yang di gerakan oleh robot",
     "depecrated": false,
     "main": "index.js",
     "directories": {
