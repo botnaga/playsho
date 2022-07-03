@@ -601,7 +601,7 @@ module.exports = {
                 if (chat.welcome) {
                     let groupMetadata = await this.groupMetadata(id) || (conn.chats[id] || {}).metadata
                     for (let user of participants) {
-                        let pp = 'https://telegra.ph/file/2d06f0936842064f6b3bb.png'
+                        let pp = 'https://telegra.ph/file/333bcec8d9be479f9d722.jpg'
                         try {
                             pp = await this.profilePictureUrl(user, 'image')
                         } catch (e) {
@@ -612,7 +612,7 @@ module.exports = {
                             let wel = API('males', '/welcome2', {
                                 profile: pp,
                                 username: await this.getName(user),
-                                background: 'https://telegra.ph/file/c538a6f5b0649a7861174.png',
+                                background: 'https://telegra.ph/file/333bcec8d9be479f9d722.jpg',
                                 groupname: await this.getName(id),
                                 membercount: groupMetadata.participants.length
                             })
@@ -632,7 +632,7 @@ module.exports = {
             case 'promote':
                 text = (chat.sPromote || this.spromote || conn.spromote || '@user ```is now Admin```')
             case 'demote':
-                if (!text) text = (chat.sDemote || this.sdemote || conn.sdemote || '@user ```is no longer Admin```')
+                if (!text) text = (chat.sDemote || this.sdemote || conn.sdemote || '@user ```is no longer Admin```
                 text = text.replace('@user', '@' + participants[0].split('@')[0])
                 if (chat.detect) this.sendMessage(id, text, {
                     contextInfo: {
@@ -701,22 +701,4 @@ global.dfail = async (type, m, conn) => {
         restrict: 'Fitur ini di *disable*!'
     }[type]
     if (msg) return conn.reply(m.chat, msg, m, { mentions: conn.parseMention(msg) })
-}
-
-let fs = require('fs')
-let chalk = require('chalk')
-const { default: fetch } = require('node-fetch')
-let file = require.resolve(__filename)
-fs.watchFile(file, () => {
-    fs.unwatchFile(file)
-    console.log(chalk.redBright("Update 'handler.js'"))
-    delete require.cache[file]
-    if (global.reloadHandler) console.log(global.reloadHandler())
-})
-
-function clockString(ms) {
-    let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
-    let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
-    let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-    return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
 }
